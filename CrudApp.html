@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cruds-Project</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>cruds</h1>
+            <p>PRODUCT MANGEMENT SYSTEM</p>
+        </div>
+
+
+        <form id="submit">
+            <input type="text" id="title" placeholder="title" required>
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price" required>
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small onkeyup="getTotal()" id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category" required>
+
+            <button id="btn" >create</button>
+        </form>
+
+
+        <div class="output">
+            <div class="srchBlock">
+                <input onkeyup=" searchInput(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnsrch">
+                    <button onclick="getSearchMood(this.id)" id="srchTitle">search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="srchCategory">search by category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>uptade</th>
+                    <th>delete</th>
+                </tr>
+
+                <tbody id="tab">
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
